@@ -30,7 +30,7 @@ export class RechargeHistoryService {
     const result = data.filter((item)=>{
       return item.Account.id == idUser
     })
-    console.log(result);
+    // console.log(result);
     
     return result
 
@@ -45,11 +45,11 @@ export class RechargeHistoryService {
   }
 
   async User_recharge(body:number,@User() userReq): Promise<RechargeHistory>{
-    console.log(body)
+    // console.log(body)
     const data = new RechargeHistory()
     data.Account = userReq.id;
     let a = data.wait_money = body;
-    console.log(data)
+    // console.log(data)
 
     return await this.historyRepository.save(data)
   }

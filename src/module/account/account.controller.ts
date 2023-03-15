@@ -184,19 +184,19 @@ export class AccountController {
         this.accountService.edit_pass(user.id,newPass)
         return {
           action: true,
-          message: 'password changed'
+          message: 'Password changed!'
         }
       }
       else{
         return {
           action: false,
-          message: 'ko khop mt mowis'
+          message: 'Password does not match!'
         }
       }
     }else{
       return {
           action: false,
-        message: 'maatj khaaur nhaapj dda sai'
+        message: 'Password falsed!'
       }
     }
   }
